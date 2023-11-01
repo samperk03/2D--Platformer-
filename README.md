@@ -3,8 +3,7 @@ Project 4 for MSCH-C220
 
 Basic elements of a 2d platformer 
 
-10/24/23 - added three levels with increasingly difficult terrain to navigate 
-
+added enemies and the ability to fight them 
 
 
 ## Implementation
@@ -17,9 +16,7 @@ Built with Godot 4.1
 MSCH - C220 resources 
 
 ## Future Development
-- enemies to fight
-- portals to progress through levels
-- Camera to track the player 
+- debug player movement 
 
 
 ## Created by
