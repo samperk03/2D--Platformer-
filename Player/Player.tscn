@@ -162,7 +162,6 @@ animations = [{
 size = Vector2(32, 96)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(4, -100)
 up_direction = Vector2(0.999636, -0.0269902)
 script = ExtResource("1_du0a1")
 gravity = Vector2(0.54, 20)

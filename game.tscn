@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://60ybd8otxpd3"]
+[gd_scene load_steps=15 format=3 uid="uid://60ybd8otxpd3"]
 
 [ext_resource type="Texture2D" uid="uid://5gkoibvhrpgv" path="res://Assets/kenney_abstract-platformer/Tilesheet/tilesheet_complete.png" id="1_i1ujd"]
 [ext_resource type="Script" path="res://StateMachine/Player_Container.gd" id="2_iwhnu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Camera.gd" id="3_i36rx"]
 [ext_resource type="PackedScene" uid="uid://cye7bc32e7aer" path="res://Enemies/Golem.tscn" id="4_se41u"]
 [ext_resource type="PackedScene" uid="uid://cqwfa5aslniok" path="res://Enemies/Wolf.tscn" id="5_ig4oq"]
+[ext_resource type="PackedScene" uid="uid://dgnn5pebnskge" path="res://Levels/portal.tscn" id="7_6rbjb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8ckf"]
 texture = ExtResource("1_i1ujd")
@@ -1267,6 +1268,9 @@ layer_0/tile_data = PackedInt32Array(-65541, 0, 0, -5, 0, 0, 65531, 0, 0, 131067
 [node name="Player_Container" type="Node2D" parent="."]
 script = ExtResource("2_iwhnu")
 
+[node name="Spawn" type="Marker2D" parent="Player_Container"]
+position = Vector2(100, 100)
+
 [node name="Enemy_Container" type="Node2D" parent="."]
 
 [node name="Bat" parent="Enemy_Container" instance=ExtResource("3_ayrjj")]
@@ -1296,3 +1300,5 @@ script = ExtResource("3_i36rx")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_0ljul")
+
+[node name="Portal" parent="." instance=ExtResource("7_6rbjb")]
