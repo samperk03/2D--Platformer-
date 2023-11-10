@@ -5,13 +5,13 @@ extends CharacterBody2D
 var jump_power = Vector2.ZERO
 var direction = 1
 
-@export var gravity = Vector2(0,30)
+@export var gravity = Vector2(0,100)
 
-@export var move_speed = 100
-@export var max_move = 1000
+@export var move_speed = 105
+@export var max_move = 500
 
 @export var jump_speed = 200
-@export var max_jump = 4000
+@export var max_jump = 800
 
 @export var leap_speed = 200
 @export var max_leap = 2000
@@ -20,6 +20,9 @@ var moving = false
 var is_jumping = false
 var double_jumped = false
 var should_direction_flip = true # wether or not player controls (left/right) can flip the player sprite
+
+func _ready():
+	up_direction = Vector2.UP
 
 
 func _physics_process(_delta):
